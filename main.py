@@ -98,9 +98,9 @@ def run(trainset, trainloader, testloader, config):
     n_batches = len(trainloader)
     print("[INFO] Split method: ", config.method)
 
-    if config.resume :
+    if config.resume:
         load_round = config.load_round
-        ckpt = torch.load("splitmb/roundfull_%d_%s.pt" % (load_round, exp_name))
+        ckpt = torch.load("checkpoint/roundfull_%d_%s.pt" % (load_round, exp_name))
         model.load_state_dict(ckpt)
         print('load succ')
     
