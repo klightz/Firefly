@@ -128,7 +128,7 @@ def run(trainset, trainloader, testloader, config):
                 model.decay_lr(0.1)
 
             if epoch % 20 == 0 or epoch == config.n_epochs:
-                np.save("dec5/%s.npy" % exp_name, stats)
+                np.save("checkpoint/%s.npy" % exp_name, stats)
 
             if epoch % 20 == 0 or epoch == config.n_epochs:
                 torch.save(model.state_dict(), "dec5/%s.pt" % exp_name)
