@@ -158,7 +158,7 @@ class SpNet(nn.Module):
                         isfirst = False
                     for j in self.next_layers[i]:
                         print('passive', self.net[j].module.weight.shape)
-                        self.net[j].spffn_passive_grow(split_idx, new_idx, isfirst = isfirst)
+                        self.net[j].spffn_passive_grow(split_idx, new_idx)
 
         else:
             threshold= self.sp_threshold()
