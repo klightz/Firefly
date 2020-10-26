@@ -131,7 +131,7 @@ def run(trainset, trainloader, testloader, config):
                 np.save("checkpoint/%s.npy" % exp_name, stats)
 
             if epoch % 20 == 0 or epoch == config.n_epochs:
-                torch.save(model.state_dict(), "dec5/%s.pt" % exp_name)
+                torch.save(model.state_dict(), "checkpoint/%s.pt" % exp_name)
 
         np.save("checkpoint/roundfull_%d_%s.npy" % (round, exp_name), stats)
         torch.save(model.state_dict(), "checkpoint/roundfull_%d_%s.pt" % (round, exp_name))
